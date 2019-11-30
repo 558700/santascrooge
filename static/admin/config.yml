@@ -1,0 +1,15 @@
+backend:
+  name: git-gateway
+  repo: lucymk/santascrooge
+  branch: master # Branch to update (optional; defaults to master)
+media_folder: "images/uploads" # Media files will be stored in the repo under images/uploads
+collections:
+  - name: "issues-with-responses"
+    label: "Issues with responses"
+    folder: "issues_with_responses"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Issue", name: "issue", widget: "string" }
+      - { label: "Jeremy's response", name: "jc-response", widget: "string" }
+      - { label: "Boris' response", name: "bj-response", widget: "string" }
