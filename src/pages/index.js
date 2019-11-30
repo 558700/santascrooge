@@ -27,7 +27,7 @@ const IndexPage = () => (
     </Layout>
     <script
       dangerouslySetInnerHTML={{
-        _html: `if (window.netlifyIdentity) {
+        __html: `if (window.netlifyIdentity) {
                   window.netlifyIdentity.on("init", user => {
                     if (!user) {
                       window.netlifyIdentity.on("login", () => {
