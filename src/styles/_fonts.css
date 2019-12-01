@@ -1,0 +1,95 @@
+/*  Work Sans */
+
+@font-face {
+  font-family: "Work Sans";
+  src: url("../assets/fonts/WorkSans-Bold.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  src: url("../assets/fonts/WorkSans-Regular.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  src: url("../assets/fonts/WorkSans-Medium.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Yantramanav";
+  font-weight: 700;
+  src: url("../assets/fonts/Yantramanav-Black.ttf") format("truetype"); /* IE9 Compat Modes */
+}
+
+@font-face {
+  font-family: "Yantramanav";
+  font-weight: 600;
+  src: url("../assets/fonts/Yantramanav-Bold.ttf") format("truetype"); /* IE9 Compat Modes */
+}
+
+@font-face {
+  font-family: "Yantramanav";
+  font-weight: 200;
+  src: url("../assets/fonts/Yantramanav-Light.ttf") format("truetype"); /* IE9 Compat Modes */
+}
+
+@font-face {
+  font-family: "Yantramanav";
+  font-weight: 400;
+  src: url("../assets/fonts/Yantramanav-Medium.ttf") format("truetype"); /* IE9 Compat Modes */
+}
+
+@font-face {
+  font-family: "Yantramanav";
+  font-weight: 300;
+  src: url("../assets/fonts/Yantramanav-Regular.ttf") format("truetype"); /* IE9 Compat Modes */
+}
+
+@font-face {
+  font-family: "Yantramanav";
+  font-weight: 100;
+  src: url("../assets/fonts/Yantramanav-Thin.ttf") format("truetype"); /* IE9 Compat Modes */
+}
+/* Set base font family */
+* {
+  font-family: theme("fontFamily.sans");
+}
+
+/* Create font classes */
+/* @responsive {
+  .font-xs {
+    font-size: theme("fontSize.xs");
+    line-height: theme("lineHeight.xs");
+  }
+  .font-sm {
+    font-size: theme("fontSize.sm");
+    line-height: theme("lineHeight.sm");
+  }
+  .font-base {
+    font-size: theme("fontSize.base");
+    line-height: theme("lineHeight.base");
+  }
+  .font-lg {
+    font-size: theme("fontSize.lg");
+    line-height: theme("lineHeight.lg");
+  }
+  .font-xl {
+    font-size: theme("fontSize.xl");
+    line-height: theme("lineHeight.xl");
+  }
+  .font-xxl {
+    font-size: theme("fontSize.xxl");
+    line-height: theme("lineHeight.xxl");
+  }
+  .font-subheader {
+    font-size: theme("fontSize.subheader");
+    line-height: theme("lineHeight.subheader");
+  }
+  .font-header {
+    font-size: theme("fontSize.header");
+    line-height: theme("lineHeight.header");
+  } */
+/* } */

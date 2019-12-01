@@ -1,42 +1,27 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import PropTypes from "prop-types";
+import React from "react";
+import styled from "styled-components";
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+  <header>
+    <div>
+      <H1>
+        Compare the <span className="font-bold">real</span> <br /> facts
+      </H1>
     </div>
   </header>
-)
+);
+
+const H1 = styled.h1.attrs({
+  className: "mb-20 text-5xl uppercase underline leading-snug"
+})``;
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+  siteTitle: PropTypes.string
+};
 
 Header.defaultProps = {
-  siteTitle: ``,
-}
+  siteTitle: ``
+};
 
-export default Header
+export default Header;
