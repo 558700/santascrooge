@@ -9,6 +9,7 @@ collections:
     folder: "issues_with_responses"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    identifier_field: issue
     fields:
       - { label: "Issue", name: "issue", widget: "string" }
       - { label: "Jeremy's response", name: "jc-response", widget: "string" }
