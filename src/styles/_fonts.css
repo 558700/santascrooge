@@ -20,37 +20,37 @@
 
 @font-face {
   font-family: "Yantramanav";
-  font-weight: black;
+  font-weight: 700;
   src: url("../assets/fonts/Yantramanav-Black.ttf") format("truetype"); /* IE9 Compat Modes */
 }
 
 @font-face {
   font-family: "Yantramanav";
-  font-weight: bold;
+  font-weight: 600;
   src: url("../assets/fonts/Yantramanav-Bold.ttf") format("truetype"); /* IE9 Compat Modes */
 }
 
 @font-face {
   font-family: "Yantramanav";
-  font-weight: light;
+  font-weight: 200;
   src: url("../assets/fonts/Yantramanav-Light.ttf") format("truetype"); /* IE9 Compat Modes */
 }
 
 @font-face {
   font-family: "Yantramanav";
-  font-weight: medium;
+  font-weight: 400;
   src: url("../assets/fonts/Yantramanav-Medium.ttf") format("truetype"); /* IE9 Compat Modes */
 }
 
 @font-face {
   font-family: "Yantramanav";
-  font-weight: regular;
+  font-weight: 300;
   src: url("../assets/fonts/Yantramanav-Regular.ttf") format("truetype"); /* IE9 Compat Modes */
 }
 
 @font-face {
   font-family: "Yantramanav";
-  font-weight: thin;
+  font-weight: 100;
   src: url("../assets/fonts/Yantramanav-Thin.ttf") format("truetype"); /* IE9 Compat Modes */
 }
 /* Set base font family */

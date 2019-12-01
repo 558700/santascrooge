@@ -1,6 +1,13 @@
 module.exports = {
   theme: {
     extend: {
+      colors: {
+        darkblue: "#5084F9",
+        lightblue: "#C5EDFC",
+        pink: "#FEB2BB",
+        white: "#FFF",
+        grey: "#C4C4C4"
+      },
       fontFamily: {
         sans: [
           "Work Sans",

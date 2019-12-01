@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import "../styles/index.css";
 
+import Header from "../components/header";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
@@ -12,7 +13,9 @@ import {
   Headline,
   SubHeadline,
   ImageContainer,
-  RightContainer
+  RightContainer,
+  DownloadButton,
+  UpgradeButton
 } from "../components";
 
 import jc from "../images/jc.jpg";
