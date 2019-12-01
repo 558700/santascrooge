@@ -25,8 +25,25 @@ const IndexPage = () => {
   );
   const [bjResponse, setBJResponse] = useState("cream on first u peasant");
 
+  const handleContentChange = e => {
+    e.preventDefault();
+
+    const contentType = e.currentTarget.id;
+    const text = e.currentTarget.textContent;
+
+    switch (contentType) {
+      case "issue":
+        return setIssue(text);
+      case "jcResponse":
+        return setJCResponse(text);
+      case "bjResponse":
+        return setBJResponse(text);
+      default:
+        return;
+    }
+  };
+
   window.onresize = function() {
-    console.log("herre");
     document.body.height = window.innerHeight;
   };
   window.onresize(); // called to initially set the height.
@@ -34,29 +51,59 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <div>
+      <div className="flex min-h-full">
         <LeftContainer>
+          <Header />
           <Heading>Issue:</Heading>
-          <Input>{issue}</Input>
+          <Input
+            id="issue"
+            suppressContentEditableWarning={true}
+            contentEditable="true"
+            onBlur={e => handleContentChange(e)}
+          >
+            {issue}
+          </Input>
           <Heading>Jeremy's comment:</Heading>
-          <Input>{jcResponse}</Input>
+          <Input
+            id="jcResponse"
+            suppressContentEditableWarning={true}
+            contentEditable="true"
+            onBlur={e => handleContentChange(e)}
+          >
+            {jcResponse}
+          </Input>
           <Heading>Boris' comment:</Heading>
-          <Input>{bjResponse}</Input>
+          <Input
+            id="bjResponse"
+            suppressContentEditableWarning={true}
+            contentEditable="true"
+            onBlur={e => handleContentChange(e)}
+          >
+            {bjResponse}
+          </Input>
+          <DownloadButton>download</DownloadButton>
+          <UpgradeButton>upgrade</UpgradeButton>
         </LeftContainer>
         <RightContainer>
-          <div>
-            <div className="bg-darkblue">
+          <div className="bg-lightblue">
+            <div className="bg-darkblue p-2 text-white">
               <Headline>Corbyn or Johnson?</Headline>
               <SubHeadline>
                 Be informed. Compare them on the issues that matter.
               </SubHeadline>
             </div>
-            <div className="bg-lightblue">
-              <p>Issue:</p>
-              <Input>{issue}</Input>
+            <div className="p-2">
+              <p className="mb-2 font-bold">
+                Issue:{" "}
+                {issue !== "" && (
+                  <span className="ml-1 bg-white px-2 py-1 uppercase font-sans font-normal">
+                    {issue}
+                  </span>
+                )}
+              </p>
               <div className="flex">
                 <ImageContainer response={jcResponse} src={jc} />
-                <ImageContainer response={bjResponse} src={bj} />>
+                <ImageContainer response={bjResponse} src={bj} />
               </div>
             </div>
           </div>
