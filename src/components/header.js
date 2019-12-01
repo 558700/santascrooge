@@ -13,7 +13,7 @@ const Header = ({ siteTitle }) => (
 );
 
 const H1 = styled.h1.attrs({
-  className: "mb-20 text-5xl uppercase underline leading-snug"
+  className: "mb-20 mt-8 text-5xl uppercase underline leading-snug"
 })``;
 
 Header.propTypes = {

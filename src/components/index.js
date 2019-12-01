@@ -17,7 +17,7 @@ const LeftContainer = styled.div.attrs({
 })``;
 
 const RightContainer = styled.div.attrs({
-  className: "w-1/2 flex flex-col justify-center pl-4"
+  className: "min-height-full w-1/2 flex flex-col justify-center pl-4"
 })``;
 
 const Headline = styled.p.attrs({

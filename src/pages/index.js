@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import "../styles/index.css";
 
@@ -46,15 +46,19 @@ const IndexPage = () => {
     }
   };
 
-  window.onresize = function() {
-    document.body.height = window.innerHeight;
-  };
-  window.onresize(); // called to initially set the height.
+  useEffect(() => {
+    if (typeof window !== `undefined`) {
+      window.onresize = function() {
+        document.body.height = window.innerHeight;
+      };
+      window.onresize(); // called to initially set the height.    }
+    }
+  });
 
   return (
     <Layout>
       <SEO title="Home" />
-      <div className="flex min-h-full">
+      <div className="flex min-h-screen">
         <LeftContainer>
           <Header />
           <Heading>Issue:</Heading>

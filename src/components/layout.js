@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <div>
-        <main className="px-20 py-8 min-h-full">{children}</main>
+        <main className="px-20 min-h-screen">{children}</main>
       </div>
     </>
   );
