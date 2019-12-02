@@ -20,6 +20,12 @@ import {
 
 import jc from "../images/jc.jpg";
 import bj from "../images/bj.jpg";
+import jcUpgrade from "../images/jc-upgrade.png";
+import bjUpgrade from "../images/bj-upgrade.png";
+import stripes from "../images/stripes.jpg";
+import gingerbread from "../images/gingerbread.jpg";
+import bells from "../images/bells.jpg";
+import pattern from "../images/pattern.jpg";
 
 const IndexPage = () => {
   const [issue, setIssue] = useState("scone toppings");
@@ -27,6 +33,7 @@ const IndexPage = () => {
     "i make my own jam :) do u want some?"
   );
   const [bjResponse, setBJResponse] = useState("cream on first u peasant");
+  const [upgrade, setUpgrade] = useState(0);
 
   useEffect(() => {
     if (typeof window !== `undefined`) {
@@ -37,6 +44,14 @@ const IndexPage = () => {
     }
   });
 
+  useEffect(() => {
+    const bodyBackgrounds = ["", pattern, bells, gingerbread, stripes];
+    const body = document.getElementsByTagName("body")[0];
+
+    body.style.backgroundImage = `url(${bodyBackgrounds[upgrade]})`;
+  }, [upgrade]);
+
+  console.log("upgrade", upgrade);
   const handleContentChange = e => {
     e.preventDefault();
 
@@ -98,7 +113,12 @@ const IndexPage = () => {
           <DownloadButton className="mobile:hidden" onClick={downloadImage}>
             download
           </DownloadButton>
-          <UpgradeButton className="mobile:hidden">upgrade</UpgradeButton>
+          <UpgradeButton
+            onClick={() => setUpgrade(upgrade === 4 ? 0 : upgrade + 1)}
+            className="mobile:hidden"
+          >
+            {upgrade === 4 ? "bah humbug" : "upgrade"}
+          </UpgradeButton>
         </LeftContainer>
         <RightContainer>
           <div id="imageToDownload" className="bg-lightblue">
@@ -118,8 +138,14 @@ const IndexPage = () => {
                 )}
               </p>
               <div className="flex">
-                <ImageContainer response={jcResponse} src={jc} />
-                <ImageContainer response={bjResponse} src={bj} />
+                <ImageContainer
+                  response={jcResponse}
+                  src={upgrade === 0 ? jc : jcUpgrade}
+                />
+                <ImageContainer
+                  response={bjResponse}
+                  src={upgrade === 0 ? bj : bjUpgrade}
+                />
               </div>
             </div>
           </div>
@@ -131,8 +157,11 @@ const IndexPage = () => {
               download
             </DownloadButton>
 
-            <UpgradeButton className="mobile:inline hidden">
-              upgrade
+            <UpgradeButton
+              onClick={() => setUpgrade(upgrade === 4 ? 0 : upgrade + 1)}
+              className="mobile:inline hidden"
+            >
+              {upgrade === 4 ? "bah humbug" : "upgrade"}
             </UpgradeButton>
           </div>
         </RightContainer>

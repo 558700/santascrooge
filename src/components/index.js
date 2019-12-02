@@ -4,13 +4,13 @@ import styled from "styled-components";
 import { theme } from "../../tailwind.config";
 import tree from "../images/tree.gif";
 
-const Heading = styled.p.attrs({
-  className: "mb-1 mobile:text-2xl text-3xl"
+const Heading = styled.span.attrs({
+  className: "bg-white mb-1 p-1 mobile:text-2xl text-3xl"
 })``;
 
 const Input = styled.div.attrs({
   className:
-    "p-1 mobile:text-xl mb-8 text-2xl w-full border-black border-solid border-2"
+    "p-1 bg-white mobile:text-xl mb-8 text-2xl w-full border-black border-solid border-2"
 })``;
 
 const LeftContainer = styled.div.attrs({
