@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-
+import download from "downloadjs";
+import htmlToImage from "html-to-image";
 import "../styles/index.css";
 
-import Header from "../components/header";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
@@ -28,6 +28,15 @@ const IndexPage = () => {
   );
   const [bjResponse, setBJResponse] = useState("cream on first u peasant");
 
+  useEffect(() => {
+    if (typeof window !== `undefined`) {
+      window.onresize = function() {
+        document.body.height = window.innerHeight;
+      };
+      window.onresize(); // called to initially set the height.    }
+    }
+  });
+
   const handleContentChange = e => {
     e.preventDefault();
 
@@ -46,14 +55,13 @@ const IndexPage = () => {
     }
   };
 
-  useEffect(() => {
-    if (typeof window !== `undefined`) {
-      window.onresize = function() {
-        document.body.height = window.innerHeight;
-      };
-      window.onresize(); // called to initially set the height.    }
-    }
-  });
+  const downloadImage = () => {
+    htmlToImage
+      .toPng(document.getElementById("imageToDownload"))
+      .then(function(dataUrl) {
+        download(dataUrl, "santa-scrooge.png");
+      });
+  };
 
   return (
     <Layout>
@@ -87,11 +95,11 @@ const IndexPage = () => {
           >
             {bjResponse}
           </Input>
-          <DownloadButton>download</DownloadButton>
+          <DownloadButton onClick={downloadImage}>download</DownloadButton>
           <UpgradeButton>upgrade</UpgradeButton>
         </LeftContainer>
         <RightContainer>
-          <div className="bg-lightblue">
+          <div id="imageToDownload" className="bg-lightblue">
             <div className="bg-darkblue p-2 text-white">
               <Headline>Corbyn or Johnson?</Headline>
               <SubHeadline>
