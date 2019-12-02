@@ -9,6 +9,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 
+import Header from "./header";
+
 import "../styles/index.css";
 
 const Layout = ({ children }) => {
@@ -24,9 +26,8 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div>
-        <main className="px-20 min-h-screen">{children}</main>
-      </div>
+      <Header />
+      <main className="px-20 min-h-screen">{children}</main>
     </>
   );
 };

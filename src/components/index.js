@@ -17,8 +17,13 @@ const LeftContainer = styled.div.attrs({
 })``;
 
 const RightContainer = styled.div.attrs({
-  className: "min-height-full w-1/2 flex flex-col justify-center pl-4"
-})``;
+  className: "min-height-full flex flex-col justify-center pl-4"
+})`
+  position: absolute;
+  right: 80px;
+  top: 15%;
+  width: calc((100vw - 160px) / 2);
+`;
 
 const Headline = styled.p.attrs({
   className: "leading-tight font-print font-bold text-5xl"
@@ -51,7 +56,9 @@ const ImageContainer = ({ response, src }) => (
   <div className="w-1/2 m-2">
     <Image src={src} className="b--black w-100 h-3/4" />
     <Response>
-      <span className="font-sans black uppercase bg-white">{response}</span>
+      <span className="p-px font-sans black uppercase bg-white">
+        {response}
+      </span>
     </Response>
   </div>
 );

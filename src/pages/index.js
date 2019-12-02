@@ -60,7 +60,6 @@ const IndexPage = () => {
       <SEO title="Home" />
       <div className="flex min-h-screen">
         <LeftContainer>
-          <Header />
           <Heading>Issue:</Heading>
           <Input
             id="issue"
