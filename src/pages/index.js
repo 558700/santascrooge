@@ -80,7 +80,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO />
       <div className="mobile:flex-col flex min-h-full">
         <LeftContainer>
           <Heading>Issue:</Heading>
