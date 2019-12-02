@@ -1,5 +1,8 @@
 module.exports = {
   theme: {
+    screens: {
+      mobile: { max: "700px" }
+    },
     extend: {
       colors: {
         darkblue: "#5084F9",
@@ -7,6 +10,9 @@ module.exports = {
         pink: "#FEB2BB",
         white: "#FFF",
         grey: "#C4C4C4"
+      },
+      minHeight: {
+        "3/4": "75%"
       },
       fontFamily: {
         sans: [

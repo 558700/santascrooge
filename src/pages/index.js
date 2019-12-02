@@ -66,7 +66,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <div className="flex min-h-screen">
+      <div className="mobile:flex-col flex min-h-full">
         <LeftContainer>
           <Heading>Issue:</Heading>
           <Input
@@ -95,8 +95,10 @@ const IndexPage = () => {
           >
             {bjResponse}
           </Input>
-          <DownloadButton onClick={downloadImage}>download</DownloadButton>
-          <UpgradeButton>upgrade</UpgradeButton>
+          <DownloadButton className="mobile:hidden" onClick={downloadImage}>
+            download
+          </DownloadButton>
+          <UpgradeButton className="mobile:hidden">upgrade</UpgradeButton>
         </LeftContainer>
         <RightContainer>
           <div id="imageToDownload" className="bg-lightblue">
@@ -120,6 +122,18 @@ const IndexPage = () => {
                 <ImageContainer response={bjResponse} src={bj} />
               </div>
             </div>
+          </div>
+          <div className="mt-8 hidden mobile:flex justify-between">
+            <DownloadButton
+              className="mobile:inline hidden"
+              onClick={downloadImage}
+            >
+              download
+            </DownloadButton>
+
+            <UpgradeButton className="mobile:inline hidden">
+              upgrade
+            </UpgradeButton>
           </div>
         </RightContainer>
       </div>

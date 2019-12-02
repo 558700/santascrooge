@@ -15,7 +15,7 @@ import "../styles/index.css";
 const Layout = ({ children }) => (
   <>
     <Header />
-    <main className="px-20 min-h-screen">{children}</main>
+    <main className="mobile:px-8 px-20 min-h-full">{children}</main>
   </>
 );
 
