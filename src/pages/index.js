@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import download from "downloadjs";
+import { saveAs } from "file-saver";
 import htmlToImage from "html-to-image";
 import "../styles/index.css";
 
@@ -72,10 +72,16 @@ const IndexPage = () => {
 
   const downloadImage = () => {
     htmlToImage
-      .toPng(document.getElementById("imageToDownload"))
-      .then(function(dataUrl) {
-        download(dataUrl, "santa-scrooge.png");
+      .toBlob(document.getElementById("imageToDownload"))
+      .then(function(blob) {
+        window.saveAs(blob, "santa-scrooge.png");
       });
+
+    // htmlToImage
+    //   .toPng(document.getElementById("imageToDownload"))
+    //   .then(function(dataUrl) {
+    //     download(dataUrl, "santa-scrooge.png");
+    //   });
   };
 
   return (
