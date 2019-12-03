@@ -71,10 +71,19 @@ const IndexPage = () => {
   };
 
   const downloadImage = () => {
+    // htmlToImage
+    //   .toBlob(document.getElementById("imageToDownload"))
+    //   .then(function(blob) {
+    //     window.saveAs(blob, "santa-scrooge.png");
+    //   });
+
     htmlToImage
-      .toBlob(document.getElementById("imageToDownload"))
-      .then(function(blob) {
-        window.saveAs(blob, "santa-scrooge.png");
+      .toJpeg(document.getElementById("imageToDownload"), { quality: 0.95 })
+      .then(function(dataUrl) {
+        var link = document.createElement("a");
+        link.download = "santa-scrooge.jpeg";
+        link.href = dataUrl;
+        link.click();
       });
 
     // htmlToImage
