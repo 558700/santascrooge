@@ -80,7 +80,7 @@ const ImageContainer = ({ response, src }) => (
   <div className="w-1/2 mobile:m-px m-2">
     <Image src={src} className="b--black w-100 h-3/4" />
     <Response>
-      <span className="mobile:text-sm p-px font-sans black uppercase bg-white">
+      <span className="mobile:text-sm p-px font-sans black uppercase">
         {response}
       </span>
     </Response>

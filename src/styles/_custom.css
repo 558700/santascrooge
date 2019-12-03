@@ -20,6 +20,11 @@ span.ml-1.bg-white.px-2.py-1.uppercase.font-sans.font-normal {
   font-size: 40px !important;
 }
 
+#imageToDownload div.flex {
+  color: white !important;
+  font-weight: bold !important;
+}
+
 .flex {
   font-size: 25px !important;
 }
