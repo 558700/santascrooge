@@ -88,7 +88,7 @@ const ImageContainer = ({ response, src }) => (
 );
 
 const BrandContainer = ({ src }) => (
-  <div className="w-1/2 mobile:m-px m-2"><a href="https://peoplesmomentum.com"><Mark src={src}/>Made by Momentum</a></div>
+  <div className="w-1/2 mobile:m-px m-2"><a href="https://peoplesmomentum.com"><Mark src={src} />Made by Momentum</a></div>
 );
 
 
