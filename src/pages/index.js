@@ -28,11 +28,11 @@ import bells from "../images/bells.jpg";
 import pattern from "../images/pattern.jpg";
 
 const IndexPage = () => {
-  const [issue, setIssue] = useState("scone toppings");
+  const [issue, setIssue] = useState("xmas presents");
   const [jcResponse, setJCResponse] = useState(
-    "i make my own jam :) do u want some?"
+    "a crisp £20 note in a card and a new bike"
   );
-  const [bjResponse, setBJResponse] = useState("cream on first u peasant");
+  const [bjResponse, setBJResponse] = useState("lump of coal");
   const [upgrade, setUpgrade] = useState(0);
 
   useEffect(() => {
@@ -178,6 +178,7 @@ const IndexPage = () => {
             >
               {upgrade === 4 ? "bah humbug" : "upgrade"}
             </UpgradeButton>
+            <img src="./assets/images/logo.png"></img>
           </div>
         </RightContainer>
       </div>
