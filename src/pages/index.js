@@ -15,7 +15,8 @@ import {
   ImageContainer,
   RightContainer,
   DownloadButton,
-  UpgradeButton
+  UpgradeButton,
+  BrandContainer
 } from "../components";
 
 import jc from "../images/jc.jpg";
@@ -26,6 +27,7 @@ import stripes from "../images/stripes.jpg";
 import gingerbread from "../images/gingerbread.jpg";
 import bells from "../images/bells.jpg";
 import pattern from "../images/pattern.jpg";
+import logo from "../images/icon.png";
 
 const IndexPage = () => {
   const [issue, setIssue] = useState("xmas presents");
@@ -134,6 +136,7 @@ const IndexPage = () => {
           >
             {upgrade === 4 ? "bah humbug" : "upgrade"}
           </UpgradeButton>
+
         </LeftContainer>
         <RightContainer>
           <div id="imageToDownload" className="bg-lightblue">
@@ -178,10 +181,10 @@ const IndexPage = () => {
             >
               {upgrade === 4 ? "bah humbug" : "upgrade"}
             </UpgradeButton>
-            <img src="./assets/images/logo.png"></img>
           </div>
         </RightContainer>
       </div>
+      <BrandContainer src={logo}/>
     </Layout>
   );
   {

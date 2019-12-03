@@ -59,6 +59,15 @@ const Image = styled.img.attrs({
   }
 `;
 
+const Mark = styled.img.attrs({
+})`
+  height: 100px;
+
+  @media only screen and (max-width: 700px) {
+    height: 50px;
+  }
+`;
+
 const Response = styled.div.attrs({
   className:
     "bg-darkblue mobile:p-1 p-2 border-black border-solid border-2 w-100"
@@ -77,6 +86,11 @@ const ImageContainer = ({ response, src }) => (
     </Response>
   </div>
 );
+
+const BrandContainer = ({ src }) => (
+  <div className="w-1/2 mobile:m-px m-2"><a href="https://peoplesmomentum.com"><Mark src={src}/>Made by Momentum</a></div>
+);
+
 
 const DownloadButton = styled.button.attrs({
   className: "mobile:w-1/2 rounded-sm font-bold mt-2 bg-grey p-3 lowercase mr-8"
@@ -102,5 +116,6 @@ export {
   Headline,
   SubHeadline,
   DownloadButton,
-  UpgradeButton
+  UpgradeButton,
+  BrandContainer
 };
